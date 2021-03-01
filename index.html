@@ -8,51 +8,64 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+
+    <div class="notify-section container" id="displaySuccessAlert">
+        <p class="notify" >✅ Pin Matched... Secret door is opening for you</p>
+        <h2 class="text-center">Welcome to my Secret page</h2>
+        <img src="image/fb.profile.jpg" alt="">
+    </div>
+
+
+    <div class="container" id="hideContainer">
         <div class="row">
             <div class="col-md-6">
                 <div class="pin-generator half-width">
-                    <input class="form-control" type="text">
-                    <button class="generate-btn">Generate Pin</button>
+                    <input class="form-control text-center" id="displayRandomNumber" readonly  placeholder="Please Click on generate button" type="text">
+                    <button class="generate-btn" id="generateRandomNumberBtn">Generate Pin</button>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="input-section half-width">
-                    <input class="form-control" type="text">
+                    <input id="displayInputNumber" class="form-control text-center" readonly  placeholder="Please enter your 4 digit number !" type="text">
                     <div class="numbers">
                         <div class="calc-body">
                             <div class="calc-button-row">
-                              <div class="button">7</div>
-                              <div class="button">8</div>
-                              <div class="button">9</div>
+                              <div class="button" onclick="addInputNumber(this.innerHTML)">7</div>
+                              <div class="button"onclick="addInputNumber(this.innerHTML)" >8</div>
+                              <div class="button" onclick="addInputNumber(this.innerHTML)">9</div>
                             </div>
                             <div class="calc-button-row">
-                              <div class="button">4</div>
-                              <div class="button">5</div>
-                              <div class="button">6</div>
+                              <div class="button" onclick="addInputNumber(this.innerHTML)">4</div>
+                              <div class="button" onclick="addInputNumber(this.innerHTML)">5</div>
+                              <div class="button" onclick="addInputNumber(this.innerHTML)">6</div>
                             </div>
                             <div class="calc-button-row">
-                              <div class="button">1</div>
-                              <div class="button">2</div>
-                              <div class="button">3</div>
+                              <div class="button" onclick="addInputNumber(this.innerHTML)">1</div>
+                              <div class="button" onclick="addInputNumber(this.innerHTML)">2</div>
+                              <div class="button" onclick="addInputNumber(this.innerHTML)">3</div>
                             </div>
                             <div class="calc-button-row">
-                                <div class="button"><</div>
-                                <div class="button">0</div>
-                                <div class="button">C</div>
+                                <div class="button" onclick="removeInputNumber(this.innerText)"><</div>
+                                <div class="button" onclick="addInputNumber(this.innerHTML)">0</div>
+                                <div class="button" onclick="removeInputNumber(this.innerText)">C</div>
                             </div>
                             <div>
-                                <button type="submit" class="submit-btn">Submit</button>
-                                <p class="action-left">3 try left</p>
+                                <button disabled id="submit" type="submit" class="submit-btn">Submit</button>
+                                <p class="action-left" id ="tryLeftText">3 try left</p>
                             </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="notify-section">
-            <p class="notify">❌ Pin Didn't Match, Please try again</p>
-            <p class="notify">✅ Pin Matched... Secret door is opening for you</p>
+            <p class="notify" id="displayWrongAlert">❌ Pin Didn't Match, Please try again</p>
         </div>
     </div>
+
+    
+    <script src="script.js"></script>
+    
+
 </body>
 </html>

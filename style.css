@@ -32,8 +32,9 @@ body {
     box-shadow: none;
 }
 
+
 input[type='text']{
-    background-color: #3D4153;
+    background-color: #3D4153 !important;
     padding: 10px 0px;
     color: #ffffff;
     width: 80%;
@@ -43,7 +44,7 @@ input[type='text']{
     padding: 10px;
 }
 input[type='text']:focus {
-    background-color: #3D4153;
+    background-color: #3D4153 !important;
     color: #fff;
     font-size: 20px;
 }
@@ -96,6 +97,26 @@ color: #E0B612;
     border-radius: 15px;
     padding: 5px 20px;
 }
+.notify-section img{
+    height: 550px;
+    width: 100%;
+}
+.notify-section h2{
+    color: white;
+    margin-top: 50px;
+}
+#displayWrongAlert{
+    display: none;
+    margin-top: 10px;
+}
+#displaySuccessAlert{
+    display: none;
+    margin-top: 10px;
+}
+#tryLeftText{
+    display: none;
+    
+}
 .notify-section{
     width: 35%;
     margin: 0 auto;
@@ -103,4 +124,8 @@ color: #E0B612;
 .action-left {
     color: #FF3C5F;
     margin-top: 10px;
+}
+button[disabled] {
+    background: #425062 !important;
+    cursor: not-allowed ! important;
 }
